@@ -8,5 +8,5 @@
 
    [Github](https://github.com/mdhaarishussain) | mdhaarishussain@gmail.com
   
-**Nabil Ahmed**
-  [Github](https://github.com/terrarx) | nabil13147@gmail.com
+- **Nabil Ahmed**
+    [Github](https://github.com/terrarx) | nabil13147@gmail.com
