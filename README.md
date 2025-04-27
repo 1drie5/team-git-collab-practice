@@ -15,3 +15,6 @@
 
 - **Shweta Dutta**
   [GitHub](https://github.com/shweMax) | dshwe1298@gmail.com
+
+ - **Anwesha Guha**
+  [GitHub](https://github.com/anwe25) | anweshaa332@gmail.com 
