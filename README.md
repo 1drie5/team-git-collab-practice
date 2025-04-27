@@ -9,7 +9,13 @@
    [Github](https://github.com/mdhaarishussain) | mdhaarishussain@gmail.com
   
 - **Nabil Ahmed**
+
     [Github](https://github.com/terrarx) | nabil13147@gmail.com
 
 - **SK FaizanUddin**
+
     [Github](https://github.com/SKfaizan-786) | faizanuddinsk56@gmail.com  
+
+- **Shweta Dutta**
+  
+  [GitHub](https://github.com/shweMax) | dshwe1298@gmail.com
