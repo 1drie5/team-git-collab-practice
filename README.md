@@ -13,5 +13,4 @@
   [Github](https://github.com/terrarx) | nabil13147@gmail.com
 
 - **Shweta Dutta**
-  
   [GitHub](https://github.com/shweMax) | dshwe1298@gmail.com
