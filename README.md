@@ -4,6 +4,7 @@
 - **Idries Ahamed K A**  
   [GitHub](https://github.com/1drie5) | idriesahamedka@gmail.com
 
--**Md Haaris Hussain**
+- **Md Haaris Hussain**
+
 [Github](https://github.com/mdhaarishussain) | mdhaarishussain@gmail.com
   
