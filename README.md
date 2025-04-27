@@ -10,3 +10,6 @@
   
 - **Nabil Ahmed**
     [Github](https://github.com/terrarx) | nabil13147@gmail.com
+
+- **SK FaizanUddin**
+    [Github](https://github.com/SKfaizan-786) | faizanuddinsk56@gmail.com  
