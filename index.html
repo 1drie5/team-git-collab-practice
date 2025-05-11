@@ -1,1 +1,204 @@
-//just like that
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Git & GitHub Team Collaboration Guide</title>
+</head>
+<body>
+    <header>
+        <h1>Git & GitHub Team Collaboration Master Guide</h1>
+        <nav>
+            <h2>Table of Contents</h2>
+            <ul>
+                <li><a href="#setup">Setup & Configuration</a></li>
+                <li><a href="#workflow">Team Workflow</a></li>
+                <li><a href="#branching">Branching Strategy</a></li>
+                <li><a href="#conflicts">Conflict Resolution</a></li>
+                <li><a href="#github">GitHub Collaboration</a></li>
+                <li><a href="#commands">Command Reference</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="setup">
+            <h2>1. Setup & Configuration</h2>
+            <article>
+                <h3>Initial Setup</h3>
+                <ol>
+                    <li>Install Git: <code>https://git-scm.com/downloads</code></li>
+                    <li>Configure user:
+                        <pre><code>git config --global user.name "Your Name"
+git config --global user.email "your@email.com"</code></pre>
+                    </li>
+                    <li>Clone team repository:
+                        <code>git clone https://github.com/team/repo.git</code>
+                    </li>
+                </ol>
+            </article>
+        </section>
+
+        <section id="workflow">
+            <h2>2. Team Collaboration Workflow</h2>
+            <article>
+                <h3>Standard Process Flow</h3>
+                <pre>
+                [Local Machine]          [GitHub]
+                     |                      |
+1. git pull origin main  ←−−−−−−−−−−−−−−−−−−
+                     |
+2. git checkout -b feature-branch
+                     |
+3. Make changes + commits
+                     |
+4. git push origin feature-branch −−−−−−−−→
+                     |                      |
+                     |                 Create PR
+                     |                      |
+5. Review & Merge ←−−−−−−−−−−−−−−−−−−−−−−−−−
+                </pre>
+            </article>
+        </section>
+
+        <section id="branching">
+            <h2>3. Branching Strategy</h2>
+            <article>
+                <h3>Effective Branch Management</h3>
+                <ul>
+                    <li><strong>main</strong> - Production-ready code</li>
+                    <li><strong>develop</strong> - Integration branch</li>
+                    <li><strong>feature/</strong> - New functionality</li>
+                    <li><strong>hotfix/</strong> - Critical bug fixes</li>
+                    <li><strong>release/</strong> - Preparation for deployment</li>
+                </ul>
+                <h4>Creating a Feature Branch:</h4>
+                <code>git checkout -b feature/user-authentication</code>
+            </article>
+        </section>
+
+        <section id="conflicts">
+            <h2>4. Conflict Resolution</h2>
+            <article>
+                <h3>Resolving Merge Conflicts</h3>
+                <ol>
+                    <li>Fetch latest changes: <code>git fetch origin</code></li>
+                    <li>Rebase your branch: <code>git rebase origin/main</code></li>
+                    <li>Locate conflict markers in files:
+                        <pre><<<<<<< HEAD
+Your changes
+=======
+Incoming changes
+>>>>>>></pre>
+                    </li>
+                    <li>Edit files to keep correct changes</li>
+                    <li>Mark as resolved: <code>git add .</code></li>
+                    <li>Continue rebase: <code>git rebase --continue</code></li>
+                </ol>
+            </article>
+        </section>
+
+        <section id="github">
+            <h2>5. GitHub Collaboration</h2>
+            <article>
+                <h3>Pull Request Lifecycle</h3>
+                <ol>
+                    <li>Push your branch: <code>git push origin feature-branch</code></li>
+                    <li>Create PR on GitHub repository</li>
+                    <li>Add description and reviewers</li>
+                    <li>Address review comments:
+                        <ul>
+                            <li>Make local changes</li>
+                            <li>Commit with <code>git commit --amend</code></li>
+                            <li>Force push: <code>git push -f</code></li>
+                        </ul>
+                    </li>
+                    <li>Merge after approval</li>
+                </ol>
+                
+                <h3>Code Review Tips</h3>
+                <ul>
+                    <li>Check for clear naming conventions</li>
+                    <li>Verify error handling</li>
+                    <li>Ensure consistency with project patterns</li>
+                    <li>Confirm test coverage</li>
+                </ul>
+            </article>
+        </section>
+
+        <section id="commands">
+            <h2>6. Essential Command Reference</h2>
+            <table border="1">
+                <tr>
+                    <th>Command</th>
+                    <th>Description</th>
+                    <th>When to Use</th>
+                </tr>
+                <tr>
+                    <td><code>git status</code></td>
+                    <td>Show current branch status</td>
+                    <td>Before/after any operation</td>
+                </tr>
+                <tr>
+                    <td><code>git log --oneline --graph</code></td>
+                    <td>Visualize branch history</td>
+                    <td>Understanding project history</td>
+                </tr>
+                <tr>
+                    <td><code>git diff</code></td>
+                    <td>Show uncommitted changes</td>
+                    <td>Before committing</td>
+                </tr>
+                <tr>
+                    <td><code>git stash</code></td>
+                    <td>Temporarily save changes</td>
+                    <td>Switching branches with uncommitted work</td>
+                </tr>
+                <tr>
+                    <td><code>git cherry-pick [commit]</code></td>
+                    <td>Apply specific commit</td>
+                    <td>Porting hotfixes between branches</td>
+                </tr>
+            </table>
+        </section>
+
+        <aside>
+            <h3>Pro Tips</h3>
+            <ul>
+                <li>⏳ Commit often, perfect later, publish once</li>
+                <li>💡 Use <code>.gitignore</code> for temporary files</li>
+                <li>🤝 Sync with main branch daily</li>
+                <li>🔍 Review your own code before creating PR</li>
+                <li>📝 Write commit messages in imperative tense</li>
+            </ul>
+        </aside>
+
+        <section>
+            <h2>Common Issues & Solutions</h2>
+            <details>
+                <summary>Accidental commit to main branch?</summary>
+                <ol>
+                    <li>Create new branch: <code>git branch fixes</code></li>
+                    <li>Reset main: <code>git reset --hard origin/main</code></li>
+                    <li>Checkout fixes branch: <code>git checkout fixes</code></li>
+                </ol>
+            </details>
+
+            <details>
+                <summary>Lost local changes?</summary>
+                <p>Check reflog: <code>git reflog</code> to find lost commits</p>
+            </details>
+        </section>
+    </main>
+
+    <footer>
+        <h3>Additional Resources</h3>
+        <ul>
+            <li>Official Git Documentation: <a href="https://git-scm.com/doc">https://git-scm.com/doc</a></li>
+            <li>GitHub Guides: <a href="https://guides.github.com/">https://guides.github.com/</a></li>
+            <li>Interactive Learning: <a href="https://learngitbranching.js.org/">Learn Git Branching</a></li>
+        </ul>
+        <p>Practice Repository: <a href="https://github.com/1drie5/team-git-collab-practice">Team Project</a></p>
+    </footer>
+</body>
+</html>
